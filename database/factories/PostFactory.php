@@ -13,10 +13,10 @@ class PostFactory extends Factory
     public function definition()
     {
         return [
-            'user_id' => $this->faker->randomNumber(),
+            'user_id' => \App\Models\User::factory(),
             'title' => $this->faker->word(),
-            'body' => $this->faker->word(),
-            'post_status_enum' => $this->faker->randomNumber(),
+            'body' => $this->faker->text(500),
+            'post_status_enum' => 1,
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ];

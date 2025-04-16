@@ -13,8 +13,8 @@ class CommentFactory extends Factory
     public function definition()
     {
         return [
-            'post_id' => $this->faker->randomNumber(),
-            'user_id' => $this->faker->randomNumber(),
+            'post_id' => \App\Models\Post::factory(),
+            'user_id' => \App\Models\User::factory(),
             'body' => $this->faker->word(),
             'likes' => $this->faker->randomNumber(),
             'created_at' => Carbon::now(),

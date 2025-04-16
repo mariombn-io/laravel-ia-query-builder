@@ -13,8 +13,8 @@ class PostTagFactory extends Factory
     public function definition()
     {
         return [
-            'post_id' => $this->faker->randomNumber(),
-            'tag_id' => $this->faker->randomNumber(),
+            'post_id' => \App\Models\Post::factory(),
+            'tag_id' => \App\Models\Tag::factory(),
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ];
